@@ -1,0 +1,42 @@
+@import "../../resources/styles/colors";
+
+.product-page {
+  padding: 7rem;
+}
+
+.info-section {
+  text-align: left;
+}
+
+.amount-section {
+  display: flex;
+  padding-bottom: 2rem;
+}
+
+.amount {
+  width: 3rem;
+  height: 2rem;
+  line-height: 1rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.total {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cart-button {
+  width: 20rem;
+  height: 3rem;
+  display: inline-block;
+  border: 0.1em solid #FFFFFF;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}

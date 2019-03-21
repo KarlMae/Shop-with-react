@@ -1,0 +1,23 @@
+@import "../../../resources/styles/colors";
+
+.navbar {
+  position: sticky;
+  top: 3.97rem;
+  padding: 1rem 0;
+  background-color: $background-color;
+  z-index: 10;
+  border-bottom: solid 1px #aaaaaa;
+}
+
+.full-width {
+  width: 100%;
+  display: flex;
+}
+
+.btn-group {
+  justify-content: space-around;
+}
+
+.col-md-10 {
+  display: grid;
+}

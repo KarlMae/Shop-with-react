@@ -1,0 +1,58 @@
+@import "../../resources/styles/colors";
+
+p {
+  margin: 0;
+}
+
+.paging-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+.paging {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5rem;
+}
+
+.current-page {
+  padding: 0.35em 1.2em;
+  font-weight: 500;
+}
+
+.page-count {
+  padding-right: 3rem;
+}
+
+.button {
+  height: 3em;
+  width: 3em;
+  display: inline-block;
+  border: 0.1em solid #FFFFFF;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.nav-button {
+  background-color: $menu-color;
+}
+
+.button:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+@media all and (max-width: 30em) {
+   a.button1 {
+    display: block;
+    margin: 0.4em auto;
+  }
+}

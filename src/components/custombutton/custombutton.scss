@@ -1,0 +1,43 @@
+@import "../../resources/styles/colors";
+
+.custom-button {
+  background-color: transparent;
+  border: transparent;
+  color: #303030;
+  font-size: 1.5rem;
+  padding: 0 2rem;
+}
+
+.custom-button:hover {
+  color: #606060;
+  cursor: pointer;
+}
+
+.custom-button:active {
+  color: #606060;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.btn-success {
+  background-color: $menu-color;
+  text-decoration: none;
+}
+
+.btn-success:focus {
+  background-color: $menu-color;
+  text-decoration: none;
+}
+
+.btn-success:active {
+  background-color: $menu-color;
+  text-decoration: none;
+}
+
+.button-underline {
+  text-decoration: underline;
+}

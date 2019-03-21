@@ -1,0 +1,52 @@
+@import "../../resources/styles/colors";
+
+header {
+  height: 4rem;
+  background-color: $menu-color;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.back-button {
+  margin: 0;
+  padding: 0.7rem 1.5rem;
+}
+
+.logo {
+  height: 100%;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.link {
+  display: contents;
+}
+
+.title {
+  margin: auto;
+  color: $white-text;
+}
+
+.search {
+  background: transparent;
+}
+
+.form-control {
+  background-color: #FFFFFF50;
+  border: transparent;
+}
+
+.form-control:focus {
+  background-color: $background-color;
+  border: transparent;
+}
+
+.input-group {
+  margin: auto;
+}
+
+.back-button {
+
+}

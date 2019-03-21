@@ -1,0 +1,15 @@
+@import "../../resources/styles/colors";
+
+footer {
+  background-color: $menu-color;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 5rem;
+  overflow: auto;
+  text-align: left;
+}
+
+.footer-menu {
+  cursor: pointer;
+  color: $white-text;
+}

@@ -1,0 +1,50 @@
+@import "../../../resources/styles/colors";
+
+.brand-new-container {
+  padding: 4rem 0;
+}
+
+.brand-new-image {
+  width: 75%;
+  height: 15rem;
+  cursor: pointer;
+}
+
+.brand-new-header {
+  white-space: nowrap;
+  margin: auto;
+  padding: 2rem;
+}
+
+.carousel-control-prev {
+  left: -5rem;
+  top: -3rem;
+}
+
+.carousel-control-next {
+  right: -5rem;
+  top: -3rem;
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: url("../../../resources/icons/arrow.svg");
+}
+
+.carousel-control-prev-icon:after {
+  content: url("../../../resources/icons/arrow.svg");
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  float: left;
+}
