@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Dropdown } from 'react-bootstrap'
+import {Dropdown} from 'react-bootstrap'
 import './paging.scss'
 
 class Paging extends Component {
@@ -30,7 +30,7 @@ class Paging extends Component {
 
   previousPages() {
     let additionalPages = this.props.currentPage - this.props.pageCount + 2;
-    additionalPages  = additionalPages < 0 ? 0 : additionalPages;
+    additionalPages = additionalPages < 0 ? 0 : additionalPages;
     additionalPages += 3;
 
     let pages = [];
@@ -40,7 +40,7 @@ class Paging extends Component {
           className="button"
           onClick={() => this.props.setPageNumber(i)}>
           {i}
-          </button>
+        </button>
       );
     }
 
@@ -49,7 +49,7 @@ class Paging extends Component {
 
   nextPages() {
     let additionalPages = 3 - this.props.currentPage;
-    additionalPages  = additionalPages  < 0 ? 0 : additionalPages;
+    additionalPages = additionalPages < 0 ? 0 : additionalPages;
     additionalPages += 3;
 
     let pages = [];
@@ -59,6 +59,7 @@ class Paging extends Component {
       pages.push(
         <button
           className="button"
+          key={i}
           onClick={() => this.props.setPageNumber(i)}>
           {i}
         </button>
@@ -71,7 +72,7 @@ class Paging extends Component {
   render() {
     return (
       <div className="paging-wrapper">
-        <div />
+        <div/>
         <div className="paging">
           {this.previousButton()}
           {this.previousPages()}

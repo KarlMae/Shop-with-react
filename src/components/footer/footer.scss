@@ -1,15 +1,31 @@
 @import "../../resources/styles/colors";
 
 footer {
-  background-color: $menu-color;
+  background-color: $primary-color;
   display: flex;
-  flex-direction: column;
-  padding: 3rem 5rem;
+  flex-direction: row;
+  padding: 3rem 2rem;
   overflow: auto;
   text-align: left;
+  justify-content: space-around;
+  -webkit-box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.48);
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.48);
 }
 
 .footer-menu {
   cursor: pointer;
-  color: $white-text;
+  color: $text-color;
+}
+
+.contact-info {
+  background-color: #FFFFFF30;
+  padding: 1rem;
+  -webkit-box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.30);
+  -moz-box-shadow: inset 0px 0px 4 psx 1px rgba(0, 0, 0, 0.30);
+  box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.30);
+}
+
+.row {
+  width: 100%;
 }

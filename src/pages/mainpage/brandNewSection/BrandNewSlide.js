@@ -1,22 +1,22 @@
 import React, {Component} from 'react'
-import { Row, Col } from 'react-bootstrap'
+import {Col, Row} from 'react-bootstrap'
 import './brandNewSection.scss'
-import SlideItem from './SlideItem';
+import Item from '../../../components/item/Item';
 
 class BrandNewSlide extends Component {
 
   render() {
     let items = this.props.slide.map(item => {
       return <Col xs={6} md={4}>
-        <SlideItem item={item} key={item.name}/>
+        <Item item={item} key={item.id}/>
       </Col>
     });
 
 
     return (
-        <Row>
-          {items}
-        </Row>
+      <Row>
+        {items}
+      </Row>
     );
   }
 }

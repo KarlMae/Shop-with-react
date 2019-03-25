@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import './content.scss'
 import {Container} from 'react-bootstrap'
 import items from './mockResponse'
-import Item from './Item';
+import Item from '../../../components/item/Item';
 import Paging from '../../../components/paging/Paging';
 import ContentMenu from '../contentmenu/ContentMenu';
 
@@ -21,6 +21,14 @@ class Content extends Component {
     this.nextPage = this.nextPage.bind(this);
     this.setPageNumber = this.setPageNumber.bind(this);
     this.setSelectedMenuItem = this.setSelectedMenuItem.bind(this);
+  }
+
+  componentDidUpdate() {
+    window.scroll({
+      top: 600,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
   nextPage() {

@@ -1,16 +1,27 @@
 @import "../../resources/styles/colors";
 
 .product-page {
-  padding: 7rem;
+  padding: 7rem 10rem 11rem;
 }
 
 .info-section {
   text-align: left;
+  height: 100%;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  justify-content: space-around;
+  flex-direction: column;
+  display: flex;
 }
 
 .amount-section {
   display: flex;
+  justify-content: space-between;
   padding-bottom: 2rem;
+}
+
+.amount-selector {
+  display: flex;
 }
 
 .amount {
@@ -27,7 +38,7 @@
 }
 
 .cart-button {
-  width: 20rem;
+  width: 100%;
   height: 3rem;
   display: inline-block;
   border: 0.1em solid #FFFFFF;
@@ -39,4 +50,24 @@
   text-align: center;
   transition: all 0.2s;
   cursor: pointer;
+}
+
+.product-amount {
+  size: 0.5rem;
+}
+
+.btn-primary {
+  border-color: transparent;
+}
+
+.btn-secondary {
+  border-color: transparent;
+}
+
+.btn-primary:hover {
+  border-color: transparent;
+}
+
+.btn-secondary:hover {
+  border-color: transparent;
 }

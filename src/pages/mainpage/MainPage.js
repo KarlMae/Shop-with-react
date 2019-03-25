@@ -10,9 +10,9 @@ class MainPage extends Component {
     return (
       <div>
         <Header isHomePage={true}/>
-        <BrandNewSection />
-        <Content />
-        <Footer />
+        <BrandNewSection/>
+        <Content/>
+        <Footer/>
       </div>
     )
   }

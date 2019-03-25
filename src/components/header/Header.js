@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
-import { InputGroup, FormControl } from 'react-bootstrap'
+import {FormControl, InputGroup} from 'react-bootstrap'
 import './header.scss'
 import search from '../../resources/icons/search.svg'
 import close from '../../resources/icons/close.svg'
 import cart from '../../resources/icons/cart.svg'
-import { Link } from "react-router-dom";
+import left from '../../resources/icons/left.svg'
+import {Link} from "react-router-dom";
 
 
 class Header extends Component {
@@ -14,11 +15,11 @@ class Header extends Component {
       isSearchEnabled: false,
     };
 
-    this.openSearch = this.openSearch.bind(this)
+    this.toggleSearch = this.toggleSearch.bind(this)
   }
 
-  openSearch() {
-    this.setState((state) => ({ isSearchEnabled: !state.isSearchEnabled}));
+  toggleSearch() {
+    this.setState((state) => ({isSearchEnabled: !state.isSearchEnabled}));
   }
 
   leftButton() {
@@ -26,14 +27,18 @@ class Header extends Component {
     if (this.props.isHomePage) {
       leftButton = <img
         src={this.state.isSearchEnabled ? close : search}
-        onClick={this.openSearch}
+        onClick={this.toggleSearch}
         alt="search"
-        className="logo"
+        className="left-logo logo"
       />;
     } else {
       leftButton = (
         <a href={"/"} className="back-button-link">
-          <h1 className="back-button">{"<"}</h1>
+          <img
+            src={left}
+            alt="search"
+            className="logo"
+          />
         </a>
       );
     }
@@ -42,25 +47,11 @@ class Header extends Component {
   }
 
   rightButton() {
-    let rightButton;
-    if (this.props.isHomePage) {
-      rightButton = (
-        <Link
-          to="/product"
-          className="link"
-        >
-          <img
-            className="logo"
-            src={cart}
-            alt="search"
-          />
-        </Link>
-      );
-    } else {
-      rightButton = <h1 className="back-button">{""}</h1>
-    }
-
-    return rightButton;
+    return (
+      <Link to="/cart" className="link">
+        <img className="right-logo logo" src={cart} alt="search"/>
+      </Link>
+    )
   }
 
   middleSection() {
@@ -70,8 +61,6 @@ class Header extends Component {
       middleSection = (
         <InputGroup>
           <FormControl
-            placeholder="Search for product"
-            aria-label="Search for product"
             aria-describedby="basic-addon1"
           />
         </InputGroup>

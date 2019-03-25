@@ -1,19 +1,20 @@
 import React, {Component} from 'react'
-import { ButtonGroup, Dropdown, Col } from 'react-bootstrap'
+import {ButtonGroup, Col, Dropdown} from 'react-bootstrap'
 import './contentmenu.scss'
-import CustomButton from '../../../components/custombutton/CustomButton';
+import CustomButton from '../../../components/underlinebutton/CustomButton';
 
 class ContentMenu extends Component {
 
   menuButtons() {
     let buttons = ['Necklaces', 'Wristbands', 'Rings', 'Earrings'];
     let buttonComponents = [];
-    buttons.forEach( button => {
+    buttons.forEach(button => {
       buttonComponents.push(
         <CustomButton
           onClick={() => this.props.setSelectedMenuItem(button)}
           isFocused={this.props.selectedMenuItem === button}
           text={button}
+          key={button}
         />
       );
     });

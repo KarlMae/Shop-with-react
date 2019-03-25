@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './brandNewSection.scss'
-import { Container, Carousel } from 'react-bootstrap'
+import {Carousel, Container} from 'react-bootstrap'
 import BrandNewSlide from './BrandNewSlide';
 import slides from './MockResponse'
 
@@ -8,9 +8,9 @@ class BrandNewSection extends Component {
   render() {
     const slideComponents = slides.map((slide) => {
       return (
-      <Carousel.Item>
-        <BrandNewSlide slide={slide.slide.items} key={slide.id}/>
-      </Carousel.Item>
+        <Carousel.Item>
+          <BrandNewSlide slide={slide.slide.items} key={slide.id}/>
+        </Carousel.Item>
       );
     });
 

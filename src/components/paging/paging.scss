@@ -42,12 +42,30 @@ p {
 }
 
 .nav-button {
-  background-color: $menu-color;
+  background-color: $primary-color;
 }
 
-.button:hover {
-  color: #000000;
-  background-color: #FFFFFF;
+.nav-button:hover {
+  background-color: $secondary-color !important;
+}
+
+.nav-button:focus {
+  background-color: $secondary-color !important;
+}
+
+.btn {
+  min-width: 8rem;
+  background-color: $primary-color !important;
+}
+
+.btn:hover {
+  background-color: $secondary-color !important;
+  box-shadow: none;
+}
+
+.btn:focus {
+  background-color: $secondary-color !important;
+  box-shadow: none !important;
 }
 
 @media all and (max-width: 30em) {
