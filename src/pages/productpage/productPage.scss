@@ -71,3 +71,29 @@
 .btn-secondary:hover {
   border-color: transparent;
 }
+
+.item-added-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-added-close-button {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.item-added-text {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.item-added-image {
+  margin-bottom: 1rem;
+}
+
+.item-added-button {
+  width: 100%;
+  color: #FFFFFF;
+}

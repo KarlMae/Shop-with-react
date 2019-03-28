@@ -71,3 +71,8 @@ a:hover {
 a:active {
   color: black;
 }
+
+.input-group ::placeholder {
+  color: #1f1f1f;
+  opacity: 1;
+}

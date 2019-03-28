@@ -24,25 +24,25 @@ button:focus {
 }
 
 .btn-success {
-  background-color: $primary-color;
+  background-color: $secondary-color;
   text-decoration: none;
   border-color: transparent;
 }
 
 .btn-success:focus {
-  background-color: $primary-color;
+  background-color: $secondary-shade;
   text-decoration: none;
   border-color: transparent;
 }
 
 .btn-success:hover {
-  background-color: $primary-color;
+  background-color: $secondary-shade;
   text-decoration: none;
   border-color: transparent;
 }
 
 .btn-success:active {
-  background-color: $primary-color;
+  background-color: $secondary-shade;
   text-decoration: none;
   border-color: transparent;
 }

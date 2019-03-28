@@ -5,6 +5,7 @@ import {Col, Form, Row} from 'react-bootstrap'
 import './cartPage.scss'
 import CartItem from './CartItem';
 import {Link} from "react-router-dom";
+import items from '../mainpage/content/mockResponse';
 
 
 class CartPage extends Component {
@@ -19,6 +20,22 @@ class CartPage extends Component {
 
   deleteItem(id) {
     this.setState((state) => ({items: state.items.filter(item => item.id !== id)}));
+  }
+
+  static content() {
+    let content = [];
+    for (let i = 0; i < items.length / 4; i++) {
+      let children = [];
+      for (let j = 0; j < 4; j++) {
+        content.push(
+          <td>
+            <CartItem/>
+          </td>)
+      }
+      content.push(<tr>{children}</tr>);
+    }
+
+    return content;
   }
 
   render() {

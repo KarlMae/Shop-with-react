@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
-import './brandNewSection.scss'
-import {Carousel, Container} from 'react-bootstrap'
+import { Container, Carousel } from 'react-bootstrap'
 import BrandNewSlide from './BrandNewSlide';
 import slides from './MockResponse'
+import './brandNewSection.scss'
 
 class BrandNewSection extends Component {
   render() {

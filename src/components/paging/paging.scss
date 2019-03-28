@@ -42,29 +42,29 @@ p {
 }
 
 .nav-button {
-  background-color: $primary-color;
+  background-color: $secondary-color;
 }
 
 .nav-button:hover {
-  background-color: $secondary-color !important;
+  background-color: $secondary-shade !important;
 }
 
 .nav-button:focus {
-  background-color: $secondary-color !important;
+  background-color: $secondary-shade !important;
 }
 
 .btn {
   min-width: 8rem;
-  background-color: $primary-color !important;
+  background-color: $secondary-color !important;
 }
 
 .btn:hover {
-  background-color: $secondary-color !important;
+  background-color: $secondary-shade !important;
   box-shadow: none;
 }
 
 .btn:focus {
-  background-color: $secondary-color !important;
+  background-color: $secondary-shade !important;
   box-shadow: none !important;
 }
 

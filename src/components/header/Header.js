@@ -61,6 +61,7 @@ class Header extends Component {
       middleSection = (
         <InputGroup>
           <FormControl
+            placeholder="Search for product"
             aria-describedby="basic-addon1"
           />
         </InputGroup>
