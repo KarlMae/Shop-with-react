@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Dropdown} from 'react-bootstrap'
 import './paging.scss'
+import isMobile from '../../reducers/isMobile';
 
 class Paging extends Component {
 
@@ -69,10 +70,26 @@ class Paging extends Component {
     return pages;
   }
 
+  itemsPerPage() {
+    if (!isMobile()) {
+      return <div className="page-count">
+        <Dropdown>
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Items per page
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item>30</Dropdown.Item>
+            <Dropdown.Item>60</Dropdown.Item>
+            <Dropdown.Item>90</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+      </div>
+    }
+  }
+
   render() {
     return (
       <div className="paging-wrapper">
-        <div/>
         <div className="paging">
           {this.previousButton()}
           {this.previousPages()}
@@ -84,19 +101,7 @@ class Paging extends Component {
           {this.nextPages()}
           {this.nextButton()}
         </div>
-        <div className="page-count">
-          <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
-              Items per page
-            </Dropdown.Toggle>
-
-            <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">30</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">60</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">90</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-        </div>
+          {this.itemsPerPage()}
       </div>
     )
   }

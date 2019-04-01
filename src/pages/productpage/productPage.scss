@@ -1,14 +1,9 @@
 @import "../../resources/styles/colors";
 
-.product-page {
-  padding: 7rem 10rem 11rem;
-}
-
 .info-section {
   text-align: left;
   height: 100%;
   padding-top: 1rem;
-  padding-left: 2rem;
   justify-content: space-around;
   flex-direction: column;
   display: flex;
@@ -97,3 +92,23 @@
   width: 100%;
   color: #FFFFFF;
 }
+
+.product-page {
+  padding: 7rem 10rem 11rem;
+}
+
+.product-description {
+  margin-bottom: 1rem;
+}
+
+@media all and (max-width: 600px) {
+  .product-page {
+    padding: 5rem 0;
+    margin: auto;
+  }
+
+  .row {
+    margin: auto;
+  }
+}
+

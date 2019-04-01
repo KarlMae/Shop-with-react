@@ -11,6 +11,10 @@ footer {
   -webkit-box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.48);
   -moz-box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.48);
   box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.48);
+
+  .row {
+    width: 100%;
+  }
 }
 
 .footer-menu {
@@ -22,10 +26,7 @@ footer {
   background-color: #FFFFFF30;
   padding: 1rem;
   -webkit-box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.30);
-  -moz-box-shadow: inset 0px 0px 4 psx 1px rgba(0, 0, 0, 0.30);
+  -moz-box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.30);
   box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.30);
 }
 
-.row {
-  width: 100%;
-}

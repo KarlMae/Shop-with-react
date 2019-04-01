@@ -4,8 +4,10 @@ import './header.scss'
 import search from '../../resources/icons/search.svg'
 import close from '../../resources/icons/close.svg'
 import cart from '../../resources/icons/cart.svg'
-import left from '../../resources/icons/left.svg'
+import hamburger from '../../resources/icons/hamburger.svg'
 import {Link} from "react-router-dom";
+import isMobile from '../../reducers/isMobile';
+import {withRouter} from 'react-router';
 
 
 class Header extends Component {
@@ -18,40 +20,68 @@ class Header extends Component {
     this.toggleSearch = this.toggleSearch.bind(this)
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      this.setState({isSearchEnabled: false})
+    }
+  }
+
   toggleSearch() {
     this.setState((state) => ({isSearchEnabled: !state.isSearchEnabled}));
   }
 
   leftButton() {
-    let leftButton;
-    if (this.props.isHomePage) {
-      leftButton = <img
+    if (this.props.location.pathname === '/purchaseComplete') {
+      return;
+    }
+
+    if (isMobile()) {
+      if (this.props.location.pathname === '/') {
+        return <img
+          src={hamburger}
+          alt="hamburger"
+          className="logo"
+        />
+      } else {
+        return <img
+            onClick={this.props.history.goBack}
+            src=''
+            alt="back"
+            className="left-logo logo"
+          />
+      }
+    }
+
+    if (this.props.location.pathname === '/') {
+      return <img
         src={this.state.isSearchEnabled ? close : search}
         onClick={this.toggleSearch}
         alt="search"
-        className="left-logo logo"
+        className="logo"
       />;
     } else {
-      leftButton = (
-        <a href={"/"} className="back-button-link">
-          <img
-            src={left}
+      return <img
+            onClick={this.props.history.goBack}
+            src=''
             alt="search"
-            className="logo"
+            className="left-logo logo"
           />
-        </a>
-      );
     }
-
-    return leftButton;
   }
 
   rightButton() {
-    return (
-      <Link to="/cart" className="link">
-        <img className="right-logo logo" src={cart} alt="search"/>
-      </Link>
-    )
+    if (this.props.location.pathname === '/purchaseComplete') {
+      return;
+    }
+
+    if (this.props.location.pathname !== '/cart' &&
+      this.props.location.pathname !== '/info') {
+      return (
+        <Link to="/cart" className="link">
+          <img className="right-logo logo" src={cart} alt="search"/>
+        </Link>
+      )
+    }
   }
 
   middleSection() {
@@ -84,4 +114,4 @@ class Header extends Component {
   }
 }
 
-export default Header
+export default withRouter(Header)

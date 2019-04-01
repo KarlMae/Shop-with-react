@@ -1,8 +1,8 @@
 @import "../../resources/styles/colors";
 
 header {
-  height: 3.5rem;
   background-color: $primary-color;
+  height: 3.5rem;
   display: flex;
   position: fixed;
   width: 100%;
@@ -75,4 +75,13 @@ a:active {
 .input-group ::placeholder {
   color: #1f1f1f;
   opacity: 1;
+}
+
+.left-logo {
+  content: url("../../resources/icons/arrow.svg");
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }

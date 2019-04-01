@@ -38,9 +38,9 @@ class ContentMenu extends Component {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">What's new</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Price high to low</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Price low to high</Dropdown.Item>
+                <Dropdown.Item>What's new</Dropdown.Item>
+                <Dropdown.Item>Price high to low</Dropdown.Item>
+                <Dropdown.Item>Price low to high</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Col>

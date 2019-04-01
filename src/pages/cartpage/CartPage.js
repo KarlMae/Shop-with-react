@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-import Header from '../../components/header/Header';
-import Footer from '../../components/footer/Footer';
 import {Col, Form, Row} from 'react-bootstrap'
 import './cartPage.scss'
 import CartItem from './CartItem';
@@ -41,7 +39,6 @@ class CartPage extends Component {
   render() {
     return (
       <div>
-        <Header isHomePage={false}/>
         <div className="cart-page">
           <h1 className="cart-title">Checkout</h1>
           <Row>
@@ -84,7 +81,6 @@ class CartPage extends Component {
             </Col>
           </Row>
         </div>
-        <Footer/>
       </div>
     )
   }

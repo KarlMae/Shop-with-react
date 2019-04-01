@@ -1,6 +1,6 @@
 @import "../../../resources/styles/colors";
 
-.brand-new-container {
+.container {
   padding: 4rem 0;
 }
 
@@ -19,6 +19,10 @@
 .carousel-control-prev {
   left: -5rem;
   top: -3rem;
+}
+
+.carousel .carousel-inner > .item > img {
+  margin: 0 auto;
 }
 
 .carousel-control-next {

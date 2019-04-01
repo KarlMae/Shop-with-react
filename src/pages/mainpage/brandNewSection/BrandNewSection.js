@@ -15,14 +15,12 @@ class BrandNewSection extends Component {
     });
 
     return (
-      <div className="brand-new-container">
         <Container>
           <h1 className="brand-new-header">Brand new</h1>
           <Carousel>
             {slideComponents}
           </Carousel>
         </Container>
-      </div>
     );
   }
 }

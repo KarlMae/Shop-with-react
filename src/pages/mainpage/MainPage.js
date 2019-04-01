@@ -1,18 +1,14 @@
 import React, {Component} from 'react'
 import BrandNewSection from './brandNewSection/BrandNewSection';
-import Header from '../../components/header/Header';
 import Content from './content/Content';
-import Footer from '../../components/footer/Footer';
-
+import isMobile from '../../reducers/isMobile';
 
 class MainPage extends Component {
   render() {
     return (
       <div>
-        <Header isHomePage={true}/>
-        <BrandNewSection/>
+        {!isMobile() && <BrandNewSection/>}
         <Content/>
-        <Footer/>
       </div>
     )
   }

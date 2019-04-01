@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import garbage from '../../resources/icons/garbage.svg'
 import AmountSelector from '../../components/amountselector/AmountSelector'
+import './cartPage.scss'
 
 
 class CartItem extends Component {

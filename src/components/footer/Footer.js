@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './footer.scss'
 import {Col, Row} from 'react-bootstrap'
+import isMobile from '../../reducers/isMobile';
 
 class Footer extends Component {
   render() {
@@ -13,11 +14,13 @@ class Footer extends Component {
             <h4 className="footer-menu">Shipping info</h4>
           </Col>
 
-          <Col className="contact-info">
-            <p>Tester Testerson</p>
-            <p>Tester street 10</p>
-            <p>+372 49 47282 17</p>
-          </Col>
+          {!isMobile() && (
+            <Col className="contact-info">
+              <p>Tester Testerson</p>
+              <p>Tester street 10</p>
+              <p>+372 49 47282 17</p>
+            </Col>
+          )}
         </Row>
       </footer>
     )

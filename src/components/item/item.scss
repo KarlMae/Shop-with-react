@@ -7,18 +7,24 @@
 .item {
   cursor: pointer;
   transition: 0.3s;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .name-tag {
-  font-size: 1.5rem;
   text-align: start;
   padding-left: 1.5rem;
   padding-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 .price-tag {
   font-weight: bold;
   text-align: start;
   padding-left: 1.5rem;
+}
+
+@media all and (max-width: 600px) {
+  .item {
+    width: 50%;
+  }
 }

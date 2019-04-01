@@ -1,10 +1,8 @@
 import React, {Component} from 'react'
-import Header from '../../components/header/Header';
 import {Col, Overlay, Popover, Row} from 'react-bootstrap'
 import './productPage.scss'
 import mock from './mock';
 import {convertMoney} from '../../util/moneyUtil';
-import Footer from '../../components/footer/Footer';
 import AmountSelector from '../../components/amountselector/AmountSelector';
 import {Link} from 'react-router-dom';
 
@@ -90,7 +88,6 @@ class ProductPage extends Component {
             </Link>
           </Popover>
         </Overlay>
-        <Header isHomePage={false}/>
         <div className="product-page">
           <Row>
             <Col md={5}>
@@ -126,7 +123,6 @@ class ProductPage extends Component {
             </Col>
           </Row>
         </div>
-        <Footer/>
       </div>
     )
   }
