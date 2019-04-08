@@ -38,34 +38,44 @@ class Header extends Component {
     if (isMobile()) {
       if (this.props.location.pathname === '/') {
         return <img
+          onClick={this.props.toggleHamburger}
           src={hamburger}
           alt="hamburger"
           className="logo"
         />
       } else {
-        return <img
-            onClick={this.props.history.goBack}
-            src=''
-            alt="back"
-            className="left-logo logo"
-          />
+        return (
+          <Link to="/" className="link">
+            <img
+              onClick={this.props.history.goBack}
+              src=''
+              alt="back"
+              className="left-logo logo"
+            />
+          </Link>
+        )
       }
     }
 
     if (this.props.location.pathname === '/') {
-      return <img
-        src={this.state.isSearchEnabled ? close : search}
-        onClick={this.toggleSearch}
-        alt="search"
-        className="logo"
-      />;
-    } else {
-      return <img
-            onClick={this.props.history.goBack}
-            src=''
+      return (
+          <img
+            src={this.state.isSearchEnabled ? close : search}
+            onClick={this.toggleSearch}
             alt="search"
-            className="left-logo logo"
+            className="logo"
           />
+      );
+    } else {
+      return (
+        <Link to="/" className="link">
+          <img
+              src=''
+              alt="search"
+              className="left-logo logo"
+            />
+        </Link>
+      )
     }
   }
 

@@ -4,17 +4,21 @@
   height: 100% !important;
 }
 
+@font-face {
+  font-family: 'pakenham';
+  src: url('./resources/fonts/pakenham.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: $background-color;
 }
 
-
 .App {
   text-align: center;
   margin: 0;
-  font-family: 'Dense';
+  font-family: 'pakenham';
 }
 
 
@@ -27,7 +31,6 @@ body {
   background-color: $primary-color;
 }
 
-@font-face {
-  font-family: 'Dense';
-  src: url('./resources/fonts/Dense-Regular.otf') format('otf');
+.hidden {
+  display: none;
 }
