@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import './cartPage.scss'
 import CartItem from './CartItem';
 import items from '../mainpage/content/mockResponse';
-import Link from 'react-router-dom/es/Link';
+import {Link} from 'react-router-dom';
 import Form from 'react-bootstrap/es/Form';
 
 

@@ -35,7 +35,7 @@ class App extends Component {
   }
 
   render() {
-    let hamburgerClass = !this.state.isHamburgerDisplayed && "hidden";
+    let hamburgerClass = this.state.isHamburgerDisplayed ? undefined : "hidden";
 
     return (
       <div className="App">
@@ -43,9 +43,7 @@ class App extends Component {
           <Header toggleHamburger={this.toggleHamburger}/>
 
           <div className={hamburgerClass}>
-            <Hamburger
-              onClose={() => this.toggleHamburger()}
-            />
+            <Hamburger onClose={() => this.toggleHamburger()}/>
           </div>
 
           <ScrollToTop>

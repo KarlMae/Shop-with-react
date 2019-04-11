@@ -1,16 +1,39 @@
 import React, {Component} from 'react'
 import './hamburger.scss'
+import {withRouter} from 'react-router-dom';
 
 class Hamburger extends Component {
 
-  static menuItems() {
+  constructor(props) {
+    super(props);
+
+  }
+
+  menuItems() {
     let items = ['Necklaces', 'Wristbands', 'Rings', 'Earrings'];
     let content = [];
 
 
     for (let i = 0; i < items.length; i++) {
-      content.push(<p>{items[i]}</p>);
-      content.push(<hr/>);
+      content.push(
+        <div
+          className="hamburger-button"
+          onClick={(selection) => {
+            this.props.onClose();
+
+            this.props.history.push(
+              {
+                pathname: '/',
+                state: {
+                  category: selection
+                },
+              })
+          }}
+        >
+          <p>{items[i]}</p>
+          <hr/>
+        </div>
+      )
     }
 
     return content;
@@ -20,7 +43,7 @@ class Hamburger extends Component {
     return (
       <div>
         <div className="hamburger">
-          {Hamburger.menuItems()}
+          {this.menuItems()}
         </div>
         <div
           className="back-drop"
@@ -31,4 +54,4 @@ class Hamburger extends Component {
   }
 }
 
-export default Hamburger
+export default withRouter(Hamburger)
