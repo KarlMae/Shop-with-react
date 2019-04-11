@@ -36,25 +36,12 @@ class Header extends Component {
     }
 
     if (isMobile()) {
-      if (this.props.location.pathname === '/') {
         return <img
           onClick={this.props.toggleHamburger}
           src={hamburger}
           alt="hamburger"
           className="logo"
         />
-      } else {
-        return (
-          <Link to="/" className="link">
-            <img
-              onClick={this.props.history.goBack}
-              src=''
-              alt="back"
-              className="left-logo logo"
-            />
-          </Link>
-        )
-      }
     }
 
     if (this.props.location.pathname === '/') {

@@ -18,8 +18,14 @@ class Hamburger extends Component {
 
   render() {
     return (
-      <div className="hamburger">
-        {Hamburger.menuItems()}
+      <div>
+        <div className="hamburger">
+          {Hamburger.menuItems()}
+        </div>
+        <div
+          className="back-drop"
+          onClick={() => this.props.onClose()}>
+        </div>
       </div>
     )
   }

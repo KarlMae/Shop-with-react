@@ -4,8 +4,9 @@ import {Container} from 'react-bootstrap'
 import items from './mockResponse'
 import Item from '../../../components/item/Item';
 import Paging from '../../../components/paging/Paging';
-import ContentMenu from '../contentmenu/ContentMenu';
+import ContentMenu from '../../../components/contentmenu/ContentMenu';
 import isMobile from '../../../reducers/isMobile';
+import {withRouter} from 'react-router-dom';
 
 
 
@@ -27,12 +28,23 @@ class Content extends Component {
   }
 
   componentDidUpdate() {
-    let scrollLength = isMobile() ? 0 : 620;
+    let scrollLength = isMobile() ? 0 : 640;
     window.scroll({
       top: scrollLength,
       left: 0,
       behavior: 'smooth'
     });
+  }
+
+  componentDidMount() {
+      if (this.props.location.state) {
+        this.setState({selectedMenuItem: this.props.location.state.category});
+        let scrollLength = isMobile() ? 0 : 640;
+        window.scroll({
+          top: scrollLength,
+          left: 0,
+        });
+      }
   }
 
   nextPage() {
@@ -93,4 +105,4 @@ class Content extends Component {
   }
 }
 
-export default Content
+export default withRouter(Content)

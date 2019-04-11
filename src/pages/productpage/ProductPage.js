@@ -4,7 +4,9 @@ import './productPage.scss'
 import mock from './mock';
 import {convertMoney} from '../../util/moneyUtil';
 import AmountSelector from '../../components/amountselector/AmountSelector';
-import {Link} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
+import ContentMenu from '../../components/contentmenu/ContentMenu';
+import isMobile from '../../reducers/isMobile';
 
 class ProductPage extends Component {
 
@@ -65,8 +67,22 @@ class ProductPage extends Component {
     );
   }
 
+  contentMenu() {
+    if (!isMobile()) {
+      return <ContentMenu
+        setSelectedMenuItem={(selection) => this.props.history.push(
+          {
+            pathname: '/',
+            state: {
+              category: selection
+            },
+          })
+        }
+      />
+    }
+  }
+
   render() {
-    console.log(document.getElementsByClassName("right-logo"));
     return (
       <div>
         <Overlay
@@ -89,6 +105,7 @@ class ProductPage extends Component {
           </Popover>
         </Overlay>
         <div className="product-page">
+          {this.contentMenu()}
           <Row>
             <Col md={5}>
               <img
@@ -128,4 +145,4 @@ class ProductPage extends Component {
   }
 }
 
-export default ProductPage
+export default withRouter(ProductPage)

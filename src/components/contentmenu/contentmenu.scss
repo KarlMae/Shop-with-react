@@ -1,16 +1,26 @@
-@import "../../../resources/styles/colors";
+@import "../../resources/styles/colors";
 
 .navbar {
   position: sticky;
   top: 3.5rem;
+  min-height: 4rem;
   background-color: $background-color;
   z-index: 10;
   border-bottom: solid 1px #aaaaaa;
   margin-bottom: 2rem;
+
+  .nav-buttons {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .full-width {
   width: 100%;
+  margin: auto;
   display: flex;
 }
 

@@ -39,11 +39,13 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Router basename="/~karmae/Karl.Hendrik.Mae">
+        <Router basename="/">
           <Header toggleHamburger={this.toggleHamburger}/>
 
           <div className={hamburgerClass}>
-            <Hamburger />
+            <Hamburger
+              onClose={() => this.toggleHamburger()}
+            />
           </div>
 
           <ScrollToTop>

@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
-import {ButtonGroup, Col, Dropdown} from 'react-bootstrap'
+import {ButtonGroup, Dropdown} from 'react-bootstrap'
 import './contentmenu.scss'
-import CustomButton from '../../../components/underlinebutton/CustomButton';
+import CustomButton from '../underlinebutton/CustomButton';
+import {withRouter} from 'react-router';
 
 class ContentMenu extends Component {
 
@@ -22,32 +23,38 @@ class ContentMenu extends Component {
     return buttonComponents;
   }
 
+  dropDown() {
+    return this.props.location.pathname === '/' && (
+      <Dropdown>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          Order by
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item>What's new</Dropdown.Item>
+          <Dropdown.Item>Price high to low</Dropdown.Item>
+          <Dropdown.Item>Price low to high</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    );
+  }
+
   render() {
     return (
       <div className="d-flex flex-column navbar">
         <div className="full-width">
-          <Col md={10}>
+          <div className="nav-buttons">
             <ButtonGroup size="lg">
               {this.menuButtons()}
             </ButtonGroup>
-          </Col>
-          <Col>
-            <Dropdown>
-              <Dropdown.Toggle variant="success" id="dropdown-basic">
-                Order by
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu>
-                <Dropdown.Item>What's new</Dropdown.Item>
-                <Dropdown.Item>Price high to low</Dropdown.Item>
-                <Dropdown.Item>Price low to high</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </Col>
+          </div>
+          <div className="dropdown">
+            {this.dropDown()}
+          </div>
         </div>
       </div>
     )
   }
 }
 
-export default ContentMenu
+export default withRouter(ContentMenu)
